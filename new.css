@@ -10,8 +10,9 @@ body, html {
   }
   .stars {
     position: absolute;
-    width: 100vw;
+    width: 95vw;
     height: 100vh;
+    overflow: hidden;
   }
   .star {
     position: absolute;
