@@ -1,0 +1,51 @@
+* {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+
+.sponsors-container {
+    overflow: hidden;
+    width: 100%; /* Full width of viewport */
+}
+
+.sponsors {
+    display: flex;
+    gap: 20px;
+    animation: scroll 12s linear infinite;
+}
+
+.sponsor-logo {
+    background-color:white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.sponsor-logo img {
+    width: 150%; 
+    height: auto;
+    object-fit: cover; 
+    }
