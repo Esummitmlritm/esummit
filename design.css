@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .stars {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: drift 15s linear infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  }
+  @keyframes drift {
+    0% { transform: translate(0px, 0px); }
+    100% { transform: translate(calc(-10vw + 20vw * var(--drift-x)), calc(-10vh + 20vh * var(--drift-y))); }
+  }
+  .star::before, .star::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .star::before {
+    transform: rotate(45deg);
+  }
+  .star::after {
+    transform: rotate(-45deg);
+  }
+  .line {
+    position: absolute;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.2);
+    pointer-events: none;
+    animation: moveLine 1s linear infinite;
+  }
+  @keyframes moveLine {
+    0% { opacity: 0.1; }
+    25%{opacity: 0.3;}
+    50% { opacity: 0.5; }
+    100% { opacity: 0.2;}
+  }    
