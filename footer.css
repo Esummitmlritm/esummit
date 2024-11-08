@@ -1,0 +1,78 @@
+ *{
+    background-color: black;
+    color: white;
+}    
+.foot {
+    height: 300px;
+    width: 100%;
+    border: 2px solid black;
+    margin-top: 100%; 
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.foot .social {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px;  
+}
+
+a i {
+    font-size: 24px;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in;
+}
+
+a i:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+    font-size: 30px;
+}
+.address {
+    margin-left: 750px;
+    margin-top: -80px;
+}
+
+.clg_add {
+    margin-top: 40px;
+    display: block;
+}
+
+.contact {
+    margin-left: 1050px;
+    margin-top: 10px;
+}
+
+.contact .email_id {
+    margin-top: 20px;
+}
+
+.contact .email_id a {
+    text-decoration: none;
+    transition: transform 0.3s ease-in;
+}
+
+.contact .email_id a:hover {
+    font-size: 15px;
+    color: #0077b5;
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+.bottom-right {
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    font-size: 14px; 
+     color: white;   
+    z-index: 1;  
+}
+.msg {
+    position: absolute;
+    top: 5px; 
+    left: 20px; 
+    font-size: 16px; 
+    color: white;
+}
+
