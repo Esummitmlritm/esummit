@@ -1,42 +1,40 @@
 const febHolidays = [
-    "Dark Chocolate Day", "Groundhog Day", "Carrot Cake Day", "Wear Red Day",
-    "Weatherperson's Day", "Chopsticks Day", "Periodic Table Day", "Kite Flying Day",
-    "Pizza Day", "Umbrella Day", "Inventor's Day", "Global Movie Day", "Tortellini Day",
-    "Valentine's Day", "Gumdrop Day", "Do a Grouch a Favor Day", "Cabbage Day",
-    "Battery Day", "Chocolate Mint Day", "Love Your Pet Day", "President's Day",
-    "Cook a Sweet Potato Day", "Tile Day", "Toast Day", "Clam Chowder Day",
-    "Pistachio Day", "Polar Bear Day", "Tooth Fairy Day"
+    "Ideathon", "Hackathon", "Internship Fair", "Startup Expo",
+    "Auto Expo", "Keynote Session", "Panel Discussion", "Hello", "Esummit", "IIC",
+    "Meghanad", "Akhil", "Mithresh", "Rochan"
 ];
 
 const eventDetails = [
-    "Celebrate with some delicious dark chocolate.",
-    "Find out if we’ll have six more weeks of winter.",
-    "Enjoy a slice of delicious carrot cake.",
-    "Wear red to raise awareness about heart disease.",
-    "Thank your local weatherperson for their forecasts.",
-    "Practice your chopstick skills with your favorite meal.",
-    "Learn about the periodic table and its elements.",
-    "Fly a kite and enjoy the breeze.",
-    "Indulge in a slice of pizza from your favorite place.",
-    "Keep yourself dry with a stylish umbrella.",
-    "Celebrate inventors and their amazing creations.",
-    "Watch a global movie to celebrate cinema.",
-    "Enjoy a plate of delicious tortellini.",
-    "Celebrate love and affection with Valentine's Day.",
-    "Snack on some tasty gumdrops.",
-    "Do something nice for someone who's grouchy.",
-    "Cook up some cabbage in your favorite recipe.",
-    "Make sure your batteries are charged and ready.",
-    "Indulge in some chocolate mint treats.",
-    "Show love for your pets.",
-    "Celebrate past presidents and their contributions.",
-    "Cook up a sweet potato dish.",
-    "Appreciate the beauty of tiles in your home.",
-    "Toast to a great day with your favorite drink.",
-    "Enjoy a bowl of clam chowder.",
-    "Snack on some pistachios.",
-    "Learn about polar bears and their habitats.",
-    "Leave a coin for the tooth fairy."
+    "Pitch your idea and get sponsors for your idea.",
+    "24hrs hackathon at college will be a crazy time to spend.",
+    "Grab an internship with your skills.",
+    "Pitch your startup idea and get rights for it.",
+    "Come and experience a wide variety of cars and bikes.",
+    "Experience stories from great speakers.",
+    "Wild people will come and interact.",
+    "Hello people.",
+    "Esummit 2k24, a grand event coming ahead.",
+    "IIC - Innovation and Incubation Center.",
+    "Meghanad Reddy, indie game developer.",
+    "Akhil, a tension candidate.",
+    "Mithresh, known for his unique style.",
+    "Rochan, a brilliant candidate."
+];
+
+const eventImages = [
+    "images/coming.png", "images/hackathon.jpg", "images/internship.jpg", 
+    "images/startup.jpg", "images/autoexpo.jpg", "images/keynote.jpg", 
+    "images/panel.jpg", "images/hello.jpg", "images/esummit.jpg", 
+    "images/iic.jpg", "images/meghanad.jpg", "images/akhil.jpg", 
+    "images/mithresh.jpg", "images/rochan.jpg"
+];
+
+const eventLinks = [
+    "https://docs.google.com/forms/d/e/1FAIpQLSdTRyfkcQv2uxBZIytQn6IKyKZvLyeWQpFUCG-4MeLngq2PWA/viewform", "https://link-hackathon.com", "https://link-internship.com",
+    "https://link-startup.com", "https://link-autoexpo.com", "https://link-keynote.com",
+    "https://link-panel.com", "https://link-hello.com", "https://link-esummit.com",
+    "https://link-iic.com", "https://link-meghanad.com", "https://link-akhil.com",
+    "https://link-mithresh.com", "https://link-rochan.com"
 ];
 
 const ulEl = document.querySelector("ul");
@@ -44,6 +42,7 @@ const eventDetailsEl = document.getElementById("eventDetails");
 const eventInfoEl = document.querySelector(".event-info");
 const modalBody = document.getElementById("modalBody");
 const eventModal = new bootstrap.Modal(document.getElementById('eventModal'));
+const registerButtonPC = document.getElementById("registerbutton");
 const d = new Date();
 let daynumber = d.getMonth() === 1 ? d.getDate() - 1 : 0;
 let activeIndex = daynumber;
@@ -59,18 +58,18 @@ function init() {
         liEl.innerHTML = `<time datetime="2022-02-${idx + 1}">${idx + 1}</time><span>${holiday}</span>`;
         ulEl.append(liEl);
 
-        // Add click event for all devices
+        // Add click event for both PC and Mobile views
         liEl.addEventListener('click', () => {
             adjustDay(idx - daynumber);
-            eventInfoEl.classList.add('active');
-            modalBody.textContent = eventDetails[activeIndex];
+            updateEventInfo(activeIndex);
             eventModal.show();
         });
     });
     ulEl.style.setProperty("--rotateDegrees", rotate);
+
     adjustDay(0);
 
-    // Continuous swipe handling for smooth scrolling
+    // Enable swipe functionality
     ulEl.addEventListener("pointerdown", (e) => {
         startY = e.clientY;
         isDragging = true;
@@ -79,11 +78,11 @@ function init() {
 
     ulEl.addEventListener("pointermove", (e) => {
         if (!isDragging) return;
-        
+
         diffY = e.clientY - startY;
-        if (Math.abs(diffY) > 20) { // Adjust sensitivity threshold
+        if (Math.abs(diffY) > 20) {
             adjustDay(diffY > 0 ? 1 : -1);
-            startY = e.clientY; // Update start point for continuous adjustment
+            startY = e.clientY;
         }
     });
 
@@ -97,7 +96,6 @@ function init() {
         startY = null;
     });
 
-    // Optional: Allow keyboard navigation for accessibility
     window.addEventListener("keydown", (e) => {
         switch (e.key) {
             case "ArrowUp":
@@ -125,6 +123,27 @@ function adjustDay(nr) {
 
     newActiveEl.classList.add("active");
 
-    // Update event details
-    eventDetailsEl.textContent = eventDetails[activeIndex];
+    // Update event details and image for PC view
+    updateEventInfo(activeIndex);
+}
+
+function updateEventInfo(index) {
+    eventDetailsEl.innerHTML = `
+        <img src="${eventImages[index]}" alt="Event Poster" class="event-img">
+        <p>${eventDetails[index]}</p>
+    `;
+
+    // Update event details and image for the modal on mobile
+    modalBody.innerHTML = `
+        <img src="${eventImages[index]}" alt="Event Poster" class="event-img">
+        <p>${eventDetails[index]}</p>
+        <button id="modalRegisterButton" class="btn btn-1">Register Now</button>
+    `;
+
+    // Show event info on PC view
+    eventInfoEl.classList.add('active');
+
+    // Set register button link for PC and mobile
+    registerButtonPC.onclick = () => window.open(eventLinks[index], '_blank');
+    document.getElementById("modalRegisterButton").onclick = () => window.open(eventLinks[index], '_blank');
 }
