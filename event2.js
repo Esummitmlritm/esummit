@@ -22,11 +22,11 @@ const eventDetails = [
 ];
 
 const eventImages = [
-    "images/coming.png", "images/hackathon.jpg", "images/internship.jpg", 
-    "images/startup.jpg", "images/autoexpo.jpg", "images/keynote.jpg", 
-    "images/panel.jpg", "images/hello.jpg", "images/esummit.jpg", 
-    "images/iic.jpg", "images/meghanad.jpg", "images/akhil.jpg", 
-    "images/mithresh.jpg", "images/rochan.jpg"
+    "images/coming.png", "images/coming.png", "images/coming.png", 
+    "images/coming.png", "images/coming.png", "images/coming.png", 
+    "images/coming.png", "images/coming.png", "images/coming.png", 
+    "images/coming.png", "images/coming.png", "images/coming.png", 
+    "images/coming.png", "images/coming.png"
 ];
 
 const eventLinks = [
