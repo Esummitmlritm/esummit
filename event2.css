@@ -1,43 +1,89 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+}
+
+/* Unique styling for the main container */
+.event-stats {
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(128, 128, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+    bottom: 300px;
+}
+
+/* Optional animation effect for uniqueness */
+.event-stats::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(128, 128, 255, 0.2), transparent 70%);
+    transform: rotate(45deg);
+    animation: pulse 5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1) rotate(45deg);
+    }
+    100% {
+        transform: scale(1.5) rotate(45deg);
+    }
+}
+
+.event-stats h2 {
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    margin-right: 50rem;
+}
+
+.statistics {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.stat-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    min-width: 120px;
+}
+
+.number {
+    font-size: 2em;
+    color: #b39ddb; /* Purple color */
+    font-weight: bold;
+}
+
+.label {
+    font-size: 0.9em;
+    color: #888;
+    text-transform: uppercase;
+    margin-top: 5px;
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-body {
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-    font-family: sans-serif;
-    background-color: rgb(6, 6, 6);
-    background-image: linear-gradient(rgb(0, 0, 0, 0.5), rgb(0, 0, 0, 0.5));
-    color: white;
-    transition: background-color 500ms ease;
-    margin: 0;
-    padding: 0;
-    margin-top: 20px;
-}
-
-header {
-    position: absolute;
-    z-index: 999;
-    text-align: center;
-    top: 0rem;
-    padding: 1rem;
-    background: inherit;
-}
-
 .container {
     position: relative;
     max-width: 100%;
 }
-.pad{
-    display: block;
-    position: relative; /* Makes it a block-level element */
-    z-index: 10;
-    clear: both;
-}
+
 .event-info {
     background-color: #333;
     padding: 1rem;
@@ -117,6 +163,7 @@ ul {
     max-height: 300px; /* Adjust based on your layout needs */
     object-fit: cover;
 }
+
 .modal-title{
     color: black;
 }
@@ -144,3 +191,189 @@ ul {
 .modal-body img {
     max-height: 300px;
 }
+.visuallyhidden {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    opacity: 0;
+    
+  }
+  
+  h1 {
+    color: white;
+    text-align: center;
+    margin-top: 1em;
+  }
+  
+  .container {
+    padding: 20px;
+    margin-top: 2em;
+    background: rgba(0,0,0,.1)
+  }
+  .rome{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+  }
+  .card-carousel {
+    --card-width: 80%;
+    --card-max-width: 280px;
+    --card-height: 350px;
+    --carousel-min-width: 600px;
+    z-index: 1;
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height: var(--card-height);
+    min-width: var(--carousel-min-width);
+    transition: filter .3s ease;
+  }
+  
+  @media screen and (max-width: 640px) {
+    .card-carousel {
+      margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
+      margin: 0 auto;
+    }
+    .pad{
+      margin: 10rem;
+    }
+  }
+  
+  
+  .card-carousel.smooth-return {
+    transition: all .2s ease;
+  }
+  
+  .card-carousel .card {
+    background: whitesmoke;
+    width: var(--card-width);
+    max-width: var(--card-max-width);
+    text-align: center;
+    padding: 1em;
+    min-width: 250px;
+    height: var(--card-height);
+    position: absolute;
+    margin: 0 auto;
+    color: rgba(0,0,0,.5);
+    transition: inherit;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 1em;
+    filter: brightness(.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card.highlight {
+    filter: brightness(1)
+  }
+  
+  
+  .card:nth-of-type(1) .image-container {
+      background-image: url("user.png");
+  }
+   
+  .card:nth-of-type(2) .image-container {
+    background-image: url("user.png")
+  }
+  
+  .card:nth-of-type(3) .image-container {
+    background-image: url("user.png")
+  }
+  .card:nth-of-type(4) .image-container {
+    background-image: url("user.png")
+  }
+  .card:nth-of-type(5) .image-container {
+    background-image: url("user.png")
+  }
+  
+  
+  
+  .image-container {
+    width: 8em;
+    height: 8em;
+    position: relative;
+    background-size: cover;
+    margin-bottom: 2em;
+    border-radius: 100%;
+    padding: 1em;
+    -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+  -moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+  box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
+    
+  }
+  
+  .image-container::after {
+    content: "";
+    display: block;
+    width: 120%;
+    height: 120%;
+    border: solid 3px rgba(0,0,0,.1);
+    border-radius: 100%;
+    position: absolute;
+    top: calc(-10% - 3px);
+    left: calc(-10% - 3px);
+  }
+  
+  .event-stats h2 {
+    padding: 1em;
+    margin-top: 1em;
+    background: rgba(0,0,0,.3);
+    text-align: center;
+    justify-content: center;
+    color: white;
+    border-radius: .2em;
+    display: inline-block;
+    transform: translateX(calc((100vw - 100%) / 2));
+    margin-right: 30em;
+  }
+  
+  h2 a {
+    color: #f5b916
+  }
+
+.handles{
+    display: flex;
+}
+a{
+    padding: 10px;
+}
+.sponsors-container {
+    overflow: auto;
+    width: 100%; /* Full width of viewport */
+}
+
+.sponsors {
+    display: flex;
+    gap: 20px;
+    animation: scroll 12s linear infinite;
+}
+
+.sponsor-logo {
+    background-color:white;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+.sponsor-logo img {
+    width: 150%; 
+    height: auto;
+    object-fit: cover; 
+    }
