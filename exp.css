@@ -588,6 +588,7 @@ ul {
     max-height: 300px; /* Adjust based on your layout needs */
     object-fit: cover;
 }
+
 .modal-title{
     color: black;
 }
