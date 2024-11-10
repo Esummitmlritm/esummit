@@ -15,8 +15,12 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(128, 128, 255, 0.3);
     position: relative;
     overflow: hidden;
-    bottom: 300px;
+   margin-bottom: 300px;
 }
+.modal-body {
+    padding: 20px;
+}
+
 
 /* Optional animation effect for uniqueness */
 .event-stats::before {
@@ -83,7 +87,11 @@
     position: relative;
     max-width: 100%;
 }
-
+.pad{
+    min-height: 50vh;
+    height: 100%;
+    object-fit: cover;
+}
 .event-info {
     background-color: #333;
     padding: 1rem;
@@ -229,7 +237,7 @@ ul {
     transition: filter .3s ease;
   }
   
-  @media screen and (max-width: 430px) {
+  @media screen and (min-width: 600px) {
     .card-carousel {
       margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
       margin: 0 auto;
