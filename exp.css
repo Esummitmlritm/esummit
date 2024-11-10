@@ -193,6 +193,7 @@ article {
     font-weight: 300;
     transform: translateY(-10%); /* Move slightly upwards */
     background-color: transparent; /* Ensure no background color */
+    font-size: 1.5rem;
 }
 
 footer {
@@ -416,11 +417,18 @@ footer {
 .bear-link svg {
     width: 75%;
 }
+@media (max-width: 768px) {
+  .bear-link {
+      top: 1rem;
+      right: 1rem;
+  }
+}
 .wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    width: 80%;
 }
 
 /* Unique styling for the main container */
@@ -458,8 +466,9 @@ footer {
 }
 
 .event-stats h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
+    font-size: 1.5em;
+    margin-bottom: 25px;
+    margin-right: 50rem;
 }
 
 .statistics {
@@ -643,7 +652,11 @@ ul {
   
   @media screen and (max-width: 640px) {
     .card-carousel {
-      margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2)
+      margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
+      margin: 0 auto;
+    }
+    .pad{
+      margin: 10rem;
     }
   }
   
@@ -725,15 +738,17 @@ ul {
     left: calc(-10% - 3px);
   }
   
-  h2 {
+  .event-stats h2 {
     padding: 1em;
     margin-top: 1em;
     background: rgba(0,0,0,.3);
     text-align: center;
+    justify-content: center;
     color: white;
     border-radius: .2em;
     display: inline-block;
-    transform: translateX(calc((100vw - 100%) / 2))
+    transform: translateX(calc((100vw - 100%) / 2));
+    margin-right: 30em;
   }
   
   h2 a {
