@@ -229,16 +229,16 @@ ul {
     transition: filter .3s ease;
   }
   
-  @media screen and (max-width: 640px) {
+  @media screen and (max-width: 430px) {
     .card-carousel {
       margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
       margin: 0 auto;
     }
     .pad{
       margin: 10rem;
+      padding-left: 0;
     }
   }
-  
   
   .card-carousel.smooth-return {
     transition: all .2s ease;
