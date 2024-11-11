@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
   @import 'normalize.css';
+
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
   
   body {
       display: grid;
@@ -7,8 +9,8 @@
       min-height: 100vh;
       background: hsl(0 0% 90%);
       color: hsl(0 0% 10%);
-      font-family: 'Libre Baskerville', 'SF Pro Text', 'SF Pro Icons', 'AOS Icons', 'Helvetica Neue',
-          Helvetica, Arial, sans-serif, system-ui;
+      font-family: 'Roboto', sans-serif;
+
   }
   
   body::before {
@@ -31,11 +33,13 @@
       transform-style: flat;
       pointer-events: none;
       z-index: -1;
+      font-family: 'Roboto', sans-serif;
   }
   
   h1 {
       position: relative;
       font-size: clamp(2rem, 3vw + 1rem, 8rem);
+      font-family: 'Roboto', sans-serif;
   }
   
   h2,
@@ -220,6 +224,7 @@ footer {
     .content {
         grid-template: 1fr / 1fr 1fr;
     }
+    
 }
 
 @supports (animation-timeline: scroll()) {
@@ -330,6 +335,7 @@ footer {
         --start: 0;
         --mid: 1;
         --end: 0;
+        font-family: 'Roboto', sans-serif;
     }
 
     article:nth-of-type(4) :is(h2, p) {
@@ -343,6 +349,7 @@ footer {
         --destination: 0 -100%;
         --start: 1;
         --end: 0;
+        font-family: 'Roboto', sans-serif;
     }
 
     .tile {
@@ -417,6 +424,7 @@ footer {
 .bear-link svg {
     width: 75%;
 }
+
 @media (max-width: 768px) {
   .bear-link {
       top: 1rem;
@@ -468,7 +476,7 @@ footer {
 .event-stats h2 {
     font-size: 1.5em;
     margin-bottom: 25px;
-    margin-right: 50rem;
+    text-align: center;
 }
 
 .statistics {
@@ -514,6 +522,7 @@ footer {
     padding: 1rem;
     border-radius: 5px;
     display: none;
+    margin-right: 50px;
 }
 
 .event-info.active {
@@ -528,6 +537,7 @@ ul {
     perspective: 900px;
     transform-style: preserve-3d;
     transition: transform 0.5s ease;
+    margin-left: 30px;
 }
 
 ul > li {
@@ -658,6 +668,7 @@ ul {
     }
     .pad{
       margin: 10rem;
+      padding-left: 0;
     }
   }
   
@@ -765,6 +776,7 @@ a{
 .sponsors-container {
     overflow: auto;
     width: 100%; /* Full width of viewport */
+    margin-top: 10rem;
 }
 
 .sponsors {
@@ -806,6 +818,7 @@ a{
         position: relative;
         padding: 20px;
         box-sizing: border-box;
+        
     }
     .foot .social {
         position: absolute;
@@ -871,3 +884,4 @@ a{
         font-size: 16px; 
         color: white;
     }
+
