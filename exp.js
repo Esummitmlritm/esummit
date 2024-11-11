@@ -22,11 +22,11 @@ const eventDetails = [
 ];
 
 const eventImages = [
-  "images/coming.png", "images/coming.png", "images/coming.png", 
-  "images/coming.png", "images/coming.png", "images/coming.png", 
-  "images/coming.png", "images/coming.png", "images/coming.png", 
-  "images/coming.png", "images/coming.png", "images/coming.png", 
-  "images/coming.png", "images/coming.png"
+  "coming.png", "coming.png", "coming.png", 
+  "coming.png", "coming.png", "coming.png", 
+  "coming.png", "coming.png", "coming.png", 
+  "coming.png", "coming.png", "coming.png", 
+  "coming.png", "coming.png"
 ];
 
 const eventLinks = [
@@ -475,3 +475,4 @@ sponsorsContainer.innerHTML += logos;
 sponsorsContainer.addEventListener('animationiteration', () => {
     sponsorsContainer.style.transform = 'translateX(0)';
 });
+
