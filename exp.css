@@ -128,7 +128,7 @@
           translate: -4rem 0;
       }
       .tiles {
-          justify-self: end;
+          justify-self: flex-end;
       }
   }
   .tile::after,
@@ -226,6 +226,7 @@ footer {
     }
     
 }
+
 
 @supports (animation-timeline: scroll()) {
     :root {
@@ -515,6 +516,7 @@ footer {
 .container {
     position: relative;
     max-width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .event-info {
@@ -609,6 +611,7 @@ ul {
     display: block;
     margin: 10px auto;
 }
+
 .event-img {
     width: 100%;
     max-height: 300px; /* Adjust this value based on desired height */
@@ -631,20 +634,20 @@ ul {
     z-index: -1;
     right: 0;
     opacity: 0;
-    
   }
-  
+
   h1 {
     color: white;
     text-align: center;
     margin-top: 1em;
   }
-  
+
   .container {
     overflow: hidd;
     padding: 20px;
-    margin-top: 2em;
-    background: rgba(0,0,0,.1)
+    margin-top: 1.5em;
+    background: rgba(0,0,0,.1);
+    margin-bottom: 3em;
   }
   
   .card-carousel {
@@ -669,6 +672,7 @@ ul {
     .pad{
       margin: 10rem;
       padding-left: 0;
+
     }
   }
   
@@ -735,7 +739,6 @@ ul {
     -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
   -moz-box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
   box-shadow: inset 0px 0px 17px 0px rgba(0,0,0,0.3);
-    
   }
   
   .image-container::after {
@@ -818,6 +821,7 @@ a{
         position: relative;
         padding: 20px;
         box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
         
     }
     .foot .social {
@@ -831,13 +835,13 @@ a{
         color: white;
         margin: 0 10px;
         text-decoration: none;
-        transition: transform 0.3s ease-in;
+        transition: transform 0.1s ease-in;
     }
     
     a i:hover {
         color: #0077b5;
         transform: scale(1.2);
-        font-size: 30px;
+        font-size: 25px;
     }
     .address {
         margin-left: 750px;
@@ -867,7 +871,6 @@ a{
         font-size: 15px;
         color: #0077b5;
         transform: scale(1.2);
-        text-decoration: underline;
     }
     .bottom-right {
         position: fixed;
@@ -885,3 +888,20 @@ a{
         color: white;
     }
 
+@media screen and (max-width: 600px) {
+    html, body {
+        overflow-x: hidden;
+        display: flex;
+        flex-direction: column; /* Stack content vertically on small screens */
+    }
+
+    .container-rochan {
+        position: relative;/* Ensure no horizontal overflow */
+        right: 10px;
+        margin-top: 50px;
+    }
+    .pad{
+        position: relative;
+        right: 25px;
+    }
+}
