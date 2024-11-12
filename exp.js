@@ -502,4 +502,3 @@ function handleSwipe() {
         adjustDay(-1);
 }
 }
-
