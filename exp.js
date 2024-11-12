@@ -481,12 +481,12 @@ let startX = 0;
 let endX = 0;
 
 // Start touch event
-containerEl.addEventListener("touchstart", (e) => {
+container.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
 });
 
 // End touch event
-containerEl.addEventListener("touchend", (e) => {
+container.addEventListener("touchend", (e) => {
     endX = e.changedTouches[0].clientX;
     handleSwipe();
 });
@@ -502,3 +502,9 @@ function handleSwipe() {
         adjustDay(-1);
 }
 }
+
+window.addEventListener('scroll', () => {
+  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);
+
+
