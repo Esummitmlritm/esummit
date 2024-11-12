@@ -905,3 +905,12 @@ a{
         right: 25px;
     }
 }
+.navs{
+    width: 100%;
+}
+.nav-pad{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vw;
+}
