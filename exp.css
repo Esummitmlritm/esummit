@@ -1353,7 +1353,7 @@ a{
 h1 {
     font-size: 5em;
     font-weight: bold;
-    font-family: new;
+    font-family: astro;
     text-decoration: none;
     position: relative;
     color: transparent;
@@ -1382,8 +1382,8 @@ h1 {
   }
 
   @font-face{
-    font-family: new;
-    src: url("new.otf");
+    font-family: astro;
+    src: url("astro.ttf");
   }
 
   @keyframes slideIn {
