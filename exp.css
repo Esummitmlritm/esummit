@@ -549,7 +549,9 @@ ul > li {
     --rotateX: calc(1deg * var(--rotateDegrees) * calc(var(--day_idx) - var(--currentDay)));
     transform: rotateX(var(--rotateX)) translateZ(190px) translateX(-50%) scale(var(--scale, 1));
     --hue: calc(var(--rotateDegrees) * var(--day_idx));
-    background-color: hsl(var(--hue), 50%, var(--lightness, 50%));
+    background-color: #1B1B1B;
+    border-color: white;
+    border-style: solid;
     width: 70%;
     color: white;
     display: grid;
