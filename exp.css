@@ -581,7 +581,9 @@ ul > li {
     --rotateX: calc(1deg * var(--rotateDegrees) * calc(var(--day_idx) - var(--currentDay)));
     transform: rotateX(var(--rotateX)) translateZ(190px) translateX(-50%) scale(var(--scale, 1));
     --hue: calc(var(--rotateDegrees) * var(--day_idx));
-    background-color: hsl(var(--hue), 50%, var(--lightness, 50%));
+    background-color: #1B1B1B;
+    border-style: solid;
+    color: white;
     width: 70%;
     color: white;
     display: grid;
@@ -1348,7 +1350,87 @@ a{
     transform-origin: 4vw 16vh;
     box-shadow: -2vmin 0 0.37869171911220967vmin currentColor;
 }
-
+.background span:nth-child(39) {
+    color: #ffffff;
+    top: 33%;
+    left: 3%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: 13vw 19vh;
+    box-shadow: -2vmin 0 1.0578506972100403vmin currentColor;
+}
+.background span:nth-child(40) {
+    color: #ffffff;
+    top: 2%;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: 0vw -16vh;
+    box-shadow: 2vmin 0 1.1270986459470618vmin currentColor;
+}
+.background span:nth-child(41) {
+    color: #dedede;
+    top: 97%;
+    left: 31%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: 8vw 4vh;
+    box-shadow: 2vmin 0 1.2202255500427173vmin currentColor;
+}
+.background span:nth-child(42) {
+    color: #ffffff;
+    top: 4%;
+    left: 32%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: 25vw 20vh;
+    box-shadow: 2vmin 0 0.28395653623580186vmin currentColor;
+}
+.background span:nth-child(43) {
+    color: #ffffff;
+    top: 13%;
+    left: 4%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: 9vw -4vh;
+    box-shadow: -2vmin 0 1.0905200380958668vmin currentColor;
+}
+.background span:nth-child(44) {
+    color: #dedede;
+    top: 32%;
+    left: 45%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: -7vw 12vh;
+    box-shadow: 2vmin 0 0.5102624458188512vmin currentColor;
+}
+.background span:nth-child(45) {
+    color: #ffffff;
+    top: 11%;
+    left: 99%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: -8vw 8vh;
+    box-shadow: -2vmin 0 0.32350181370237796vmin currentColor;
+}
+.background span:nth-child(46) {
+    color: #dedede;
+    top: 5%;
+    left: 20%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: 17vw -19vh;
+    box-shadow: -2vmin 0 1.0098526531746312vmin currentColor;
+}
+.background span:nth-child(47) {
+    color: #ffffff;
+    top: 95%;
+    left: 17%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    transform-origin: 4vw 16vh;
+    box-shadow: -2vmin 0 0.37869171911220967vmin currentColor;
+}
   
 h1 {
     font-size: 5em;
@@ -1368,6 +1450,8 @@ h1 {
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
     animation: slideIn 2s ease-in-out;
+    align-items: center;
+    justify-content: center;
   }
   
   h1:hover {
@@ -1393,4 +1477,29 @@ h1 {
     50% {
       transform: translateX(0); /* Bring 'E' into view */
     }
+  }
+
+  h4{
+    color: white;
+    z-index: 1;
+    position: absolute;
+    top: 350px;
+    left: 31%;
+    animation: newslide 2s ease-in;
+    font-family: astrolab;
+    margin-top: 30px;
+  }
+
+  @keyframes newslide {
+    0% {
+      transform: translateX(100%); /* Start 'E' offscreen to the left */
+    }
+    50% {
+      transform: translateX(0); /* Bring 'E' into view */
+    }
+  }
+
+  @font-face{
+    font-family: astrolab;
+    src: url("Astrolab.ttf");
   }
