@@ -815,80 +815,116 @@ a{
     height: auto;
     object-fit: cover; 
     }
-    .foot {
-        height: 300px;
-        width: 100%;
-        border: 2px solid black;
-        margin-top: 10%; 
-        position: relative;
-        padding: 20px;
-        box-sizing: border-box;
-        font-family: 'Roboto', sans-serif;
-        
-    }
-    .foot .social {
-        position: absolute;
-        bottom: 20px; 
-        right: 20px;  
-    }
+ *{
+    background-color: black;
+    color: white;
+}    
+.foot {
+    height: 300px;
+    width: 100%;
+    border: 2px solid black;
+    margin-top: 100%; 
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
     
-    a i {
-        font-size: 24px;
-        color: white;
-        margin: 0 10px;
-        text-decoration: none;
-        transition: transform 0.1s ease-in;
-    }
-    
-    a i:hover {
-        color: #0077b5;
-        transform: scale(1.2);
-        font-size: 25px;
-    }
-    .address {
-        margin-left: 750px;
-        margin-top: -80px;
-    }
-    
-    .clg_add {
-        margin-top: 40px;
-        display: block;
-    }
-    
-    .contact {
-        margin-left: 1050px;
-        margin-top: 10px;
-    }
-    
-    .contact .email_id {
-        margin-top: 20px;
-    }
-    
-    .contact .email_id a {
-        text-decoration: none;
-        transition: transform 0.3s ease-in;
-    }
-    
-    .contact .email_id a:hover {
-        font-size: 15px;
-        color: #0077b5;
-        transform: scale(1.2);
-    }
-    .bottom-right {
-        position: fixed;
-        bottom: 10px;
-        left: 15px;
-        font-size: 14px; 
-         color: white;   
-        z-index: 1;  
-    }
-    .msg {
-        position: absolute;
-        top: 5px; 
-        left: 20px; 
-        font-size: 16px; 
-        color: white;
-    }
+}
+.foot .social {
+    position: absolute;
+    bottom: 20px; 
+    right: 20px; 
+}
+
+a i {
+    font-size: 24px;
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in;
+}
+
+a i:hover {
+    color: #0077b5;
+    transform: scale(1.2);
+    font-size: 30px;
+}
+.address {
+    margin-left: 750px;
+    margin-top: -130px;
+}
+
+.clg_add {
+    margin-top: 40px;
+    display: block;
+}
+/* Styles for address with location icon */
+.address .clg_add {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.address .clg_add i {
+    font-size: 20px;
+    margin-right: 10px; /* Space between icon and text */
+    color: #0077b5; /* Change to your preferred color */
+}
+
+.contact {
+    margin-left: 1050px;
+    margin-top: 10px;
+}
+
+.contact .email_id {
+    margin-top: 20px;
+}
+
+.contact .email_id a {
+    text-decoration: none;
+    transition: transform 0.3s ease-in;
+}
+
+.contact .email_id a:hover {
+    font-size: 15px;
+    color: #0077b5;
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+.bottom-right {
+    position: fixed;
+    bottom: 10px;
+    left: 15px;
+    font-size: 14px; 
+     color: white;   
+    z-index: 1;  
+}
+.msg {
+    position: absolute;
+    top: 5px; 
+    left: 20px; 
+    font-size: 16px; 
+    color: white;
+}
+.bottom-center{
+    position: relative; 
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 5px; 
+}
+.bottom-center i {
+    color: red; 
+}
+section {
+    border-bottom: 1.5px solid #cded09;
+    margin-bottom: 30px; 
+    width: 100%;
+}
+.email_id p{
+    color: #cded09;
+    margin-top: -4px;
+}
+
 
 @media screen and (max-width: 600px) {
     html, body {
