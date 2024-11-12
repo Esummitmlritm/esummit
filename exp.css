@@ -653,7 +653,17 @@ ul {
     border-radius: 8px; /* Optional: adds rounded corners */
     margin: 10px 0; /* Optional: adds spacing around the image */
 }
-
+.modal.fade {
+    position: absolute; /* Position it absolutely within the container */
+    top: 50%; /* Position it vertically at the center of the carousel */
+    left: 50%; /* Center it horizontally */ /* Adjust to fully center the modal */
+    z-index: 9999; /* Ensure it stays on top of other elements */
+    width: 100%; /* Width of the modal, adjust based on your design needs */ /* Optional: Set a maximum width */
+    display: none; /* Initially hidden, shown by Bootstrap */ /* Add some padding for the modal content *//* Optional: Round the corners of the modal */
+    background-color: #333; /* Set the background color of the modal */
+    height: 80vh;
+    margin-left: 7%;
+}
 
 .modal-body {
     background-color: black;
