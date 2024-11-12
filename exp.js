@@ -60,16 +60,40 @@ function init() {
 
       // Add click event for both PC and Mobile views
       liEl.addEventListener('click', () => {
-          adjustDay(idx - daynumber);
-          updateEventInfo(activeIndex);
-          eventModal.show();
-      });
+        if (idx === activeIndex) {
+            // Update the event info before showing the modal
+            updateEventInfo(activeIndex);
+    
+            // Get the position of the carousel section
+            const carousel = document.querySelector('.container');
+            const carouselRect = carousel.getBoundingClientRect(); // Get the position of the carousel relative to the viewport
+    
+            // Get the modal and adjust its position relative to the carousel
+            const modal = document.getElementById('eventModal');
+            const modalBody = document.querySelector('.modal-body');  // Modal content for further adjustments
+            modal.style.transform = 'translate(-50%, -50%)'; // Ensure the modal is perfectly centered
+    
+            // Ensure the modal has a larger size and is visible
+            modal.style.display = 'block'; // Make sure the modal is visible
+    
+            // Adjust the size of the modal if necessary
+            modalBody.style.minHeight = '80vh'; // Limit the height of the modal content to avoid overflowing
+    
+            // Show the modal
+            eventModal.show();
+        } else {
+            // Adjust carousel and active event if clicked on a non-active element
+            adjustDay(idx - daynumber);
+            updateEventInfo(idx);
+        }
+    });
   });
+
   ulEl.style.setProperty("--rotateDegrees", rotate);
 
   adjustDay(0);
 
-  // Enable swipe functionality
+  // Enable swipe functionality for carousel on mobile
   ulEl.addEventListener("pointerdown", (e) => {
       startY = e.clientY;
       isDragging = true;
@@ -147,6 +171,7 @@ function updateEventInfo(index) {
   registerButtonPC.onclick = () => window.open(eventLinks[index], '_blank');
   document.getElementById("modalRegisterButton").onclick = () => window.open(eventLinks[index], '_blank');
 }
+
 const cardsContainer = document.querySelector(".card-carousel");
 const cardsController = document.querySelector(".card-carousel + .card-controller")
 
