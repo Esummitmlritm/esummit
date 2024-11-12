@@ -9,11 +9,28 @@
 </head>
 
 <body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark navs">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav nav-pad ms-auto">
+          <a class="nav-link" aria-current="page" href="#home">Home</a>
+          <a class="nav-link" href="#events">Events</a>
+          <a class="nav-link" href="#speakers">Speakers</a>
+          <a class="nav-link" href="#Sponsors" tabindex="-1">Sponsors</a>
+          <a class="nav-link" href="#aboutus">About Us</a>
+        </div>
+      </div>
+    </div>
+  </nav>
     <header>
         <h1>E-SUMMIT</h1>
       </header>
       <main>
-        <div class="content">
+        <div class="content" id="home">
           <div class="tiles">
             <!-- boxes that transform -->
             <div style="--r: 45deg" class="tile"></div>
@@ -118,7 +135,7 @@
             </div>
         </div>
     </div>
-  <div class="container pad">
+  <div class="container pad" id="events">
     <div class="row">
         <div class="col-md-6 col-12">
             <ul></ul>
@@ -151,7 +168,7 @@
     </div>
 </div>
 
-        <div class="container-rochan">
+        <div class="container-rochan" id="speakers">
             <div class="card-carousel">
               <div class="card" id="1">
                 <div class="image-container"></div>
@@ -219,7 +236,7 @@
             </div>
             <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
           </div>
-          <div class="sponsors-container">
+          <div class="sponsors-container" id="Sponsors">
             <div class="sponsors" id="sponsors">
                 <div class="sponsor-logo">
                     <img src="netflix.jpg" alt="Sponsor 1">
@@ -251,7 +268,7 @@
             </div>
         </div>
         <p class="bottom-right">E-Summit 2024 MLRITM&copy;All rights reserved.</p>
-        <div class="foot">
+        <div class="foot" id="aboutus">
            <p class="msg">The flagship event of the IIC MLRITM, promoting entrepreneurship</p>
                <div class="social">
                    follow us 
