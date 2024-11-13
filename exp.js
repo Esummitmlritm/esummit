@@ -53,41 +53,20 @@ init();
 
 function init() {
   febHolidays.forEach((holiday, idx) => {
-      const liEl = document.createElement("li");
-      liEl.style.setProperty("--day_idx", idx);
-      liEl.innerHTML = `<time datetime="2022-02-${idx + 1}">${idx + 1}</time><span>${holiday}</span>`;
-      ulEl.append(liEl);
+    const liEl = document.createElement("li");
+    liEl.style.setProperty("--day_idx", idx);
+    liEl.innerHTML = `<time datetime="2022-02-${idx + 1}">${idx + 1}</time><span>${holiday}</span>`;
+    ulEl.append(liEl);
 
-      // Add click event for both PC and Mobile views
-      liEl.addEventListener('click', () => {
-        if (idx === activeIndex) {
-            // Update the event info before showing the modal
+    // Add click event for both PC and Mobile views
+    liEl.addEventListener('click', () => {
+        adjustDay(idx - daynumber);
             updateEventInfo(activeIndex);
-    
-            // Get the position of the carousel section
-            const carousel = document.querySelector('.container');
-            const carouselRect = carousel.getBoundingClientRect(); // Get the position of the carousel relative to the viewport
-    
-            // Get the modal and adjust its position relative to the carousel
-            const modal = document.getElementById('eventModal');
-            const modalBody = document.querySelector('.modal-body');  // Modal content for further adjustments
-            modal.style.transform = 'translate(-50%, -50%)'; // Ensure the modal is perfectly centered
-    
-            // Ensure the modal has a larger size and is visible
-            modal.style.display = 'block'; // Make sure the modal is visible
-    
-            // Adjust the size of the modal if necessary
-            modalBody.style.minHeight = '80vh'; // Limit the height of the modal content to avoid overflowing
-    
-            // Show the modal
-            eventModal.show();
-        } else {
-            // Adjust carousel and active event if clicked on a non-active element
-            adjustDay(idx - daynumber);
             updateEventInfo(idx);
-        }
+            eventModal.show();
+        
     });
-  });
+});
 
   ulEl.style.setProperty("--rotateDegrees", rotate);
 
@@ -121,17 +100,18 @@ function init() {
   });
 
   window.addEventListener("keydown", (e) => {
-      switch (e.key) {
-          case "ArrowUp":
-              adjustDay(-1);
-              break;
-          case "ArrowDown":
-              adjustDay(1);
-              break;
-          default:
-              return;
-      }
+    switch (e.key) {
+      case "ArrowUp":
+        adjustDay(-1);
+        break;
+      case "ArrowDown":
+        adjustDay(1);
+        break;
+      default:
+        return;
+    }
   });
+  
 }
 
 function adjustDay(nr) {
@@ -531,5 +511,4 @@ function handleSwipe() {
 window.addEventListener('scroll', () => {
   document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
 }, false);
-
 
