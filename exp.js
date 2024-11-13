@@ -1,24 +1,25 @@
 const febHolidays = [
-  "Ideathon", "Hackathon", "Internship Fair", "Startup Expo",
-  "Auto Expo", "Keynote Session", "Panel Discussion", "Hello", "Esummit", "IIC",
-  "Meghanad", "Akhil", "Mithresh", "Rochan"
+  "Keynote Session", "Startup Expo", "Internship Fair", "Mock Interviews",
+  "Fire Chat", "Networking Lounge", "Workshop & Master Class", "Career Guidance Program", "Hackthon", "Board Room",
+  "Ideathon", "Entrepreneurship Quiz", "Battle of Bands", "Virtual Trading League" , "Panel Discussion"
 ];
 
 const eventDetails = [
-  "Pitch your idea and get sponsors for your idea.",
-  "24hrs hackathon at college will be a crazy time to spend.",
-  "Grab an internship with your skills.",
-  "Pitch your startup idea and get rights for it.",
-  "Come and experience a wide variety of cars and bikes.",
-  "Experience stories from great speakers.",
-  "Wild people will come and interact.",
-  "Hello people.",
-  "Esummit 2k24, a grand event coming ahead.",
-  "IIC - Innovation and Incubation Center.",
-  "Meghanad Reddy, indie game developer.",
-  "Akhil, a tension candidate.",
-  "Mithresh, known for his unique style.",
-  "Rochan, a brilliant candidate."
+  "Inspiration from Visionary Leaders Listen to inspiringstories and valuable insights from successfulentrepreneurs, industry experts, and thought leaders in ourKeynote Session",
+  "Showcasing Innovation and Enterprise Explore the Startup Expo, where emerging entrepreneurs showcase their products, prototypes, and services.",
+  "Connecting Talent with Opportunity The Internship Fairconnects students with leading companies offeringinternship opportunities across various fields",
+  "Practice , prepare , and Perfect Prepare for your next career move with our Mock Interviews! Led by HR Professionals and industry experts ",
+  "Join our exclusive Fireside Chat with a renowned startup founder to gain insights, hear their inspiring journey, and receive practical advice",
+  "Expand your professional network and forge lasting connections at our exlusive Network Lounge",
+  "Connecting Talent with Opportunity The Internship Fairconnects students with leading companies offeringinternship opportunities across various fields",
+  "Plan Your Path with Expert Advice Get personalized career advice from seasoned professionals in our Career Guidance sessions",
+  "Code the Future Our Hackathon brings together tech enthusiasts andproblem-solvers for an immersive coding experience",
+  "Where Strategy Meets Execution In this high-stakes simulation, teams step intothe shoes of executives to tackle real-world business challenges",
+  "Ignite Innovation and Solve Real-World Challengesp",
+  "Test Your Business Savvy Dive into the world of startups, innovation, and business strategy with our Entrepreneurship Quiz.",
+  "Battle of Bands is an exciting competition where talented bandscompete live, showcasing their music, energy, and creativity.",
+  "Connecting Markets, Unleashing Opportunities",
+  "Engage with Experts, Gain Insights Join industryleaders, innovators, and entrepreneurs as they delveinto thought-provoking topics in a dynamic paneldiscussion."
 ];
 
 const eventImages = [
@@ -26,7 +27,7 @@ const eventImages = [
   "coming.png", "coming.png", "coming.png", 
   "coming.png", "coming.png", "coming.png", 
   "coming.png", "coming.png", "coming.png", 
-  "coming.png", "coming.png"
+  "coming.png", "coming.png","coming.png"
 ];
 
 const eventLinks = [
