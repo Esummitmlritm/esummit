@@ -63,8 +63,16 @@
     align-items: center;
     text-align: center;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
     border-radius: 10px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .unique-card-front {
@@ -101,6 +109,41 @@ p {
 .unique-card:hover {
     transform: scale(1.05);
     transition: transform 0.3s;
+}
+
+.hel{
+    font-size: 15px;
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 180px;
+        height: 280px;
+    }
+    .card-front h2, .card-back h3 {
+        font-size: 16px; /* Adjust font size for headings */
+    }
+    .card-front p, .card-back p {
+        font-size: 12px; /* Adjust font size for paragraph text */
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+}
+.hel{
+    font-size: 9px;
+}
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 150px;
+        height: 225px;
+    }
+    .card-front, .card-back {
+        padding: 10px; /* Reduce padding for smaller screens */
+}
 }
 
 @media (max-width: 1200px) {
@@ -220,6 +263,7 @@ p {
     max-width: 100%;
     font-family: 'Roboto', sans-serif;
     top: 70vh;
+    color: white;
 }
 
 .event-info {
@@ -569,27 +613,27 @@ a{
     object-fit: cover; 
     }
     .foot {
-        height: 300px;
+        height: auto;
         width: 100%;
         border: 2px solid black;
-        margin-top: 10%; 
-        position: relative;
+        margin-top: 10%;
         padding: 20px;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
-        top: 80vh;
-        
-    }
-    .foot .social {
-        position: absolute;
-        bottom: 20px; 
-        right: 20px;  
-        animation: fadeIn 1s ease-in forwards;
-      animation-delay: calc(var(--scroll) * -1s);
-      color: white;
+        position: relative;
+        background-color: #111; /* Optional: Set a background color */
+        top: 90vh;
     }
     
-    a i {
+    .foot .social {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        animation: fadeIn 1s ease-in forwards;
+        color: white;
+    }
+    
+    .foot a i {
         font-size: 24px;
         color: white;
         margin: 0 10px;
@@ -597,57 +641,105 @@ a{
         transition: transform 0.1s ease-in;
     }
     
-    a i:hover {
+    .foot a i:hover {
         color: #0077b5;
         transform: scale(1.2);
-        font-size: 25px;
     }
+    
     .address {
         color: white;
-        margin-left: 750px;
-        margin-top: -80px;
+        margin: 20px 0;
+        text-align: center;
     }
     
     .clg_add {
-        margin-top: 40px;
+        margin-top: 10px;
         display: block;
     }
     
     .contact {
         color: white;
-        margin-left: 1050px;
+        text-align: center;
         margin-top: 10px;
     }
     
     .contact .email_id {
-        margin-top: 20px;
+        margin-top: 10px;
     }
     
     .contact .email_id a {
         text-decoration: none;
         transition: transform 0.3s ease-in;
+        color: white;
     }
     
     .contact .email_id a:hover {
-        font-size: 15px;
         color: #0077b5;
         transform: scale(1.2);
     }
-    /* .bottom-right {
-        position: fixed;
-        bottom: 10px;
-        left: 15px;
-        font-size: 14px; 
-         color: white;   
-        z-index: 1;  
-    } */
+    
     .msg {
         position: absolute;
-        top: 5px; 
-        left: 20px; 
-        font-size: 16px; 
+        top: 5px;
+        left: 20px;
+        font-size: 16px;
         color: white;
     }
+    
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .address, .contact {
+            text-align: center;
+            margin-left: 0;
+        }
+    
+        .foot {
+            padding: 20px;
+        }
+    
+        .contact {
+            margin-top: 20px;
+        }
+    
+        .social {
+            right: 10px;
+            bottom: 10px;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .address, .contact {
+            font-size: 14px;
+        }
+    
+        .foot a i {
+            font-size: 20px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .address, .contact {
+            font-size: 12px;
+        }
+    
+        .foot {
+            padding: 10px;
+        }
+    
+        .foot a i {
+            font-size: 18px;
+        }
+    
+        .social {
+            right: 5px;
+            bottom: 5px;
+        }
+    
+        .msg {
+            font-size: 14px;
+        }
+    }
+    
 
 @media screen and (max-width: 600px) {
     html, body {
@@ -1241,8 +1333,9 @@ h1 {
     top: 350px;
     left: 31%;
     animation: newslide 2s ease-in;
-    font-family: astrolab;
+    font-family: cap;
     margin-top: 95px;
+    gap: 2px;
   }
 
   @keyframes newslide {
@@ -1258,6 +1351,11 @@ h1 {
     font-family: astrolab;
     src: url("Astrolab.ttf");
   }
+  @font-face{
+    font-family: cap;
+    src: url("American Captain.otf");
+  }
+
 
 .navv{
     width: 50%;
