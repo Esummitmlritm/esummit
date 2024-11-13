@@ -78,89 +78,83 @@
     <span></span>
     
  </div>
- 
+ <div class="navv">
+  <a href="#first">Home</a>
+  <a href="#second">View</a>
+  <a href="#third">Events</a>
+  <a href="#four">Speakers</a>
+ </div>
     <header>
       <h1 class="d-none d-md-block">E-SUMMIT</h1>
       <h3 class="d-block d-md-none">E-SUMMIT</h3>
-      <h4 class="d-sm-none d-md-block">ENTREPRENEURIAL SUMMIT</h4>
+      <h4 class="d-sm-none d-md-block">Entrepreneurial Summit</h4>
       </header>
       <main>
-        <div class="content new">
-          <div class="tiles">
-            <!-- boxes that transform -->
-            <div style="--r: 45deg" class="tile"></div>
-            <div style="--r: 275deg" class="tile"></div>
-            <div style="--r: 190deg" class="tile"></div>
-            <div style="--r: 45deg" class="tile"></div>
+        <div class="hero" id="first">
+        <div class="card-container">
+          <!-- Card 1 -->
+          <div class="event-card1 unique-card" onclick="flipCard(this)">
+            <div class="unique-card-inner">
+              <div class="unique-card-front">
+                <h2>Event 1</h2>
+                <p>Click for details</p>
+              </div>
+              <div class="unique-card-back">
+                <h3>Event 1 Details</h3>
+                <p>Date: November 15, 2024</p>
+                <p>Location: MLRITM</p>
+              </div>
+            </div>
           </div>
-          <section class="section--one">
-            <article>
-              <div class="title-wrap">
-                <h2 class="what"><p>WHAT IS <br> E-SUMMIT</p></h2>
+      
+          <!-- Card 2 -->
+          <div class="event-card2 unique-card" onclick="flipCard(this)">
+            <div class="unique-card-inner">
+              <div class="unique-card-front">
+                <h2>Event 2</h2>
+                <p>Click for details</p>
               </div>
-              
-              <hr>
-              <div class="content-wrap">
-                <p>
-                  Lorem, ipsum dolor sit, amet consectetur adipisicing elit. Ab
-                  vel rem dicta. Aut quidem, sed fugiat officiis inventore
-                  nostrum. Nam placeat porro, ea distinctio animi eius rerum,
-                  consequatur vero beatae.
-                </p>
+              <div class="unique-card-back">
+                <h3>Event 2 Details</h3>
+                <p>Date: November 16, 2024</p>
+                <p>Location: MLRITM</p>
               </div>
-            </article>
-            <article>
-              <div class="title-wrap">
-                <h2>STALLS</h2>
+            </div>
+          </div>
+      
+          <!-- Card 3 -->
+          <div class="event-card3 unique-card" onclick="flipCard(this)">
+            <div class="unique-card-inner">
+              <div class="unique-card-front">
+                <h2>Event 3</h2>
+                <p>Click for details</p>
               </div>
-              <hr>
-              <div class="content-wrap">
-                <p>
-                  Obcaecati nam doloremque fugiat cum corporis eveniet atque,
-                  molestias molestiae quaerat nihil sint nostrum cumque itaque
-                  commodi similique suscipit eos autem saepe velit enim voluptas
-                  eum quisquam, facilis ipsum. Et!
-                </p>
+              <div class="unique-card-back">
+                <h3>Event 3 Details</h3>
+                <p>Date: November 17, 2024</p>
+                <p>Location: MLRITM</p>
               </div>
-            </article>
-            <article>
-              <div class="title-wrap">
-                <h2>EVENTS</h2>
+            </div>
+          </div>
+      
+          <!-- Card 4 -->
+          <div class="event-card4 unique-card" onclick="flipCard(this)">
+            <div class="unique-card-inner">
+              <div class="unique-card-front">
+                <h2>Event 4</h2>
+                <p>Click for details</p>
               </div>
-              <hr>
-              <div class="content-wrap">
-                <p>
-                  Nulla atque voluptatum, a natus, ut illum voluptas incidunt
-                  ipsam reprehenderit illo perferendis. Possimus dolorem tempora
-                  minima a mollitia aperiam aliquid voluptatibus fugiat aspernatur
-                  dignissimos, ullam libero odit molestias eveniet?
-                </p>
+              <div class="unique-card-back">
+                <h3>Event 4 Details</h3>
+                <p>Date: November 18, 2024</p>
+                <p>Location: MLRITM</p>
               </div>
-            </article>
-            <article>
-              <div class="title-wrap">
-                <h2>START-UPS</h2>
-              </div>
-              <hr>
-              <div class="content-wrap">
-                <p>
-                  Similique expedita nihil beatae sunt adipisci deserunt culpa,
-                  nostrum, amet quis veritatis aperiam, ducimus repellat,
-                  assumenda atque quia dicta excepturi sint accusantium voluptas
-                  architecto. Tempore incidunt possimus aspernatur quidem, quasi!
-                  
-                </p>
-              </div>
-            </article>
-          </section>
+            </div>
+          </div>
         </div>
-        <section class="section--two"></section>
-        <section class="section--three"></section>
-        <section class="section--four"></section>
-          
-        </section>
+      </div>
       </main>
-      <div class="wrapper">
+      <div class="wrapper" id="second">
         <div class="event-stats">
             <div class="statistics">
                 <div class="stat-card">
@@ -190,7 +184,7 @@
             </div>
         </div>
     </div>
-    <div class="container pad">
+    <div class="container pad" id="third">
       <div class="row">
           <!-- Left Column: Placeholder for List -->
           <div class="col-md-6 col-12">
@@ -230,8 +224,8 @@
       </div>
   </div>
 
-        <div class="container-rochan">
-            <div class="card-carousel">
+        <div class="container-rochan" >
+            <div class="card-carousel" id="four">
               <div class="card" id="1">
                 <div class="image-container"></div>
                 <p>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, explicabo!</p>
@@ -300,33 +294,26 @@
           </div>
           <div class="sponsors-container">
             <div class="sponsors" id="sponsors">
-                <div class="sponsor-logo">
-                    <img src="netflix.jpg" alt="Sponsor 1">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="logo2.png" alt="Sponsor 2">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="logo3.png" alt="Sponsor 3">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="logo4.png" alt="Sponsor 4">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="logo5.png" alt="Sponsor 5">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="logo6.png" alt="Sponsor 6">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="logo7.png" alt="Sponsor 7">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="logo8.png" alt="Sponsor 8">
-                </div>
-                <div class="sponsor-logo">
-                    <img src="logo9.png" alt="Sponsor 9">
-                </div>
+              <div class="sponsor-logo"><img src="netflix.jpg" alt="Sponsor 1"></div>
+              <div class="sponsor-logo"><img src="logo2.png" alt="Sponsor 2"></div>
+              <div class="sponsor-logo"><img src="logo3.png" alt="Sponsor 3"></div>
+              <div class="sponsor-logo"><img src="logo4.png" alt="Sponsor 4"></div>
+              <div class="sponsor-logo"><img src="logo5.png" alt="Sponsor 5"></div>
+              <div class="sponsor-logo"><img src="logo6.png" alt="Sponsor 6"></div>
+              <div class="sponsor-logo"><img src="logo7.png" alt="Sponsor 7"></div>
+              <div class="sponsor-logo"><img src="logo8.png" alt="Sponsor 8"></div>
+              <div class="sponsor-logo"><img src="logo9.png" alt="Sponsor 9"></div>
+  
+              <!-- Duplicate set of logos for smooth loop -->
+              <div class="sponsor-logo"><img src="netflix.jpg" alt="Sponsor 1"></div>
+              <div class="sponsor-logo"><img src="logo2.png" alt="Sponsor 2"></div>
+              <div class="sponsor-logo"><img src="logo3.png" alt="Sponsor 3"></div>
+              <div class="sponsor-logo"><img src="logo4.png" alt="Sponsor 4"></div>
+              <div class="sponsor-logo"><img src="logo5.png" alt="Sponsor 5"></div>
+              <div class="sponsor-logo"><img src="logo6.png" alt="Sponsor 6"></div>
+              <div class="sponsor-logo"><img src="logo7.png" alt="Sponsor 7"></div>
+              <div class="sponsor-logo"><img src="logo8.png" alt="Sponsor 8"></div>
+              <div class="sponsor-logo"><img src="logo9.png" alt="Sponsor 9"></div>
             </div>
         </div>
         <p class="bottom-right">E-Summit 2024 MLRITM&copy;All rights reserved.</p>
