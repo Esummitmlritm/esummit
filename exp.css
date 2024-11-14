@@ -67,6 +67,7 @@
     border-radius: 10px;
     overflow-y: hidden;
     overflow-x: hidden;
+    flex-direction: column;
 }
 
 img{
@@ -1365,7 +1366,7 @@ h1 {
     color: white;
     z-index: 1;
     margin-top: 40px;
-    
+    position: sticky;
    
 }
 
@@ -1374,4 +1375,21 @@ h1 {
     color: white;
     text-decoration: none;
     position: sticky;
+}
+
+.iic{
+    object-fit: contain;
+}
+
+.home:hover{
+    color: skyblue;
+}
+.view:hover{
+    color: skyblue;
+}
+.events:hover{
+    color: skyblue;
+}
+.speakers:hover{
+    color: skyblue;
 }
