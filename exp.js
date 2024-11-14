@@ -18,7 +18,7 @@ const eventDetails = [
   "Ignite Innovation and Solve Real-World Challengesp",
   "Test Your Business Savvy Dive into the world of startups, innovation, and business strategy with our Entrepreneurship Quiz.",
   "Battle of Bands is an exciting competition where talented bandscompete live, showcasing their music, energy, and creativity.",
-  "Connecting Markets, Unleashing Opportunities",
+  "Connecting Markets, Unleashing Opportunities ",
   "Engage with Experts, Gain Insights Join industryleaders, innovators, and entrepreneurs as they delveinto thought-provoking topics in a dynamic paneldiscussion."
 ];
 
@@ -27,7 +27,7 @@ const eventImages = [
   "coming.png", "coming.png", "coming.png", 
   "coming.png", "coming.png", "coming.png", 
   "coming.png", "coming.png", "coming.png", 
-  "coming.png", "coming.png","coming.png"
+  "coming.png", "vitualTrade.jpg","coming.png"
 ];
 
 const eventLinks = [
@@ -35,7 +35,7 @@ const eventLinks = [
   "https://link-startup.com", "https://link-autoexpo.com", "https://link-keynote.com",
   "https://link-panel.com", "https://link-hello.com", "https://link-esummit.com",
   "https://link-iic.com", "https://link-meghanad.com", "https://link-akhil.com",
-  "https://link-mithresh.com", "https://link-rochan.com"
+  "https://community.stockgro.club/form/d0101a56-0963-4476-8a05-af2af88adb6b?utm_source=bigshot2024_intercollege__vadlaabhinay&utm_medium=vadlaabhinay_marrilaxmanreddyinstituteoftechnologyandmanagement_mlritm&utm_campaign=bso3_bigshot" ,"https://community.stockgro.club/form/d0101a56-0963-4476-8a05-af2af88adb6b?utm_source=bigshot2024_intercollege__vadlaabhinay&utm_medium=vadlaabhinay_marrilaxmanreddyinstituteoftechnologyandmanagement_mlritm&utm_campaign=bso3_bigshot","https://community.stockgro.club/form/d0101a56-0963-4476-8a05-af2af88adb6b?utm_source=bigshot2024_intercollege__vadlaabhinay&utm_medium=vadlaabhinay_marrilaxmanreddyinstituteoftechnologyandmanagement_mlritm&utm_campaign=bso3_bigshot","https://community.stockgro.club/form/d0101a56-0963-4476-8a05-af2af88adb6b?utm_source=bigshot2024_intercollege__vadlaabhinay&utm_medium=vadlaabhinay_marrilaxmanreddyinstituteoftechnologyandmanagement_mlritm&utm_campaign=bso3_bigshot","https://link-rochan.com"
 ];
 
 const ulEl = document.querySelector("ul");
@@ -490,7 +490,6 @@ let endX = 0;
 container.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX;
 });
-
 // End touch event
 container.addEventListener("touchend", (e) => {
     endX = e.changedTouches[0].clientX;
