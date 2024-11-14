@@ -14,7 +14,25 @@
       animation: scale-a-lil linear both;
       overflow-x: hidden;
   }
+.iicLogo{
+    display: inline-block;
+    position: absolute;
+    left: 10%;
+    top: 2px;
+    height: 150px;
+    width: 120px;
+    object-fit: contain;
+}
 
+.iicRight{
+    display: inline-block;
+    position: absolute;
+    right: 10%;
+    height: 150px;
+    width: 100px;
+    top: 2px;
+    object-fit: contain;
+}
 
 .card-container {
     display: flex;
@@ -242,6 +260,8 @@ p {
     min-width: 120px;
 }
 
+
+
 .number {
     font-size: 2em;
     color: #b39ddb; /* Purple color */
@@ -254,6 +274,44 @@ p {
     text-transform: uppercase;
     margin-top: 5px;
 }
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Applying animation to .stat-card */
+.stat-card {
+    background-color: #222;
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    min-width: 120px;
+    animation: float 3s ease-in-out infinite; /* Adding floating effect */
+}
+
+/* Alternatively, apply to .event-stats if you want the entire container to float */
+.event-stats {
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    background: linear-gradient(145deg, #1a1a1a, #333);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(128, 128, 255, 0.3);
+    overflow: hidden;
+    animation: float 3s ease-in-out infinite; /* Float animation */
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -787,6 +845,23 @@ a{
     .card-carousel{
         position: relative;
         top: 95vh;
+    }
+    .iicLogo{
+        top: 2.5vh;
+        left: 10px;
+    }
+    .iicRight{
+        top: 7.5vh;
+        left: 10px;
+    }
+    .hyd{
+        height: 50px;
+        width: 30px;
+        top: 3vh;
+        left: 0px;
+    }
+    .social{
+        bottom: 0;
     }
 }
 
@@ -1392,4 +1467,16 @@ h1 {
 }
 .speakers:hover{
     color: skyblue;
+}
+.about{
+    color: skyblue;
+}
+
+.hyd{
+    display: inline-block;
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 1;
+    object-fit: contain;
 }
