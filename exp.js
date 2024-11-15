@@ -526,3 +526,4 @@ function flipCard(card) {
   // Toggle the flipped state for the clicked card
   card.classList.toggle('flipped');
 }
+
