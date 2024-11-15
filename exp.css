@@ -14,6 +14,8 @@
       animation: scale-a-lil linear both;
       overflow-x: hidden;
   }
+
+
 .iicLogo{
     display: inline-block;
     position: absolute;
@@ -495,7 +497,7 @@ ul {
   }
 
   .container {
-    overflow: hidd;
+    overflow: hidden;
     padding: 20px;
     margin-top: 1.5em;
     background: rgba(0,0,0,.1);
@@ -504,8 +506,8 @@ ul {
   
   .card-carousel {
     --card-width: 80%;
-    --card-max-width: 280px;
-    --card-height: 350px;
+    --card-max-width: 300px;
+    --card-height: 370px;
     --carousel-min-width: 600px;
     z-index: 1;
     position: relative;
@@ -561,15 +563,15 @@ ul {
   
   
   .card:nth-of-type(1) .image-container {
-      background-image: url("user.png");
+      background-image: url("speaker1-1.png");
   }
    
   .card:nth-of-type(2) .image-container {
-    background-image: url("user.png")
+    background-image: url("speaker2-2.png")
   }
   
   .card:nth-of-type(3) .image-container {
-    background-image: url("user.png")
+    background-image: url("speaker3.jpg")
   }
   .card:nth-of-type(4) .image-container {
     background-image: url("user.png")
@@ -847,14 +849,20 @@ a{
         top: 95vh;
     }
     .iicLogo{
+        height: 70px;
+        width: 70px;
         top: 2.5vh;
         left: 10px;
     }
     .iicRight{
+        height: 70px;
+        width: 70px;
         top: 7.5vh;
         left: 10px;
     }
     .hyd{
+        height: 70px;
+        width: 70px;
         height: 50px;
         width: 30px;
         top: 3vh;
@@ -1476,7 +1484,18 @@ h1 {
     display: inline-block;
     position: absolute;
     height: 100px;
-    width: 200px;
+    width: 150px;
     z-index: 1;
     object-fit: contain;
+}
+
+.shop{
+    height: 80px;
+    width: 80px;
+    object-fit: contain;
+}
+
+.foot{
+    background-image: url("beautiful-aurora-footer-lights.png");
+    background-repeat: none;
 }
