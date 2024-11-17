@@ -103,9 +103,11 @@ function init() {
   window.addEventListener("keydown", (e) => {
     switch (e.key) {
       case "ArrowUp":
+        e.preventDefault();
         adjustDay(-1);
         break;
       case "ArrowDown":
+        e.preventDefault();
         adjustDay(1);
         break;
       default:
