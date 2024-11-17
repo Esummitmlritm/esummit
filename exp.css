@@ -59,7 +59,11 @@
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    border: 2px solid transparent; /* Add transparent border */
+    background-clip: padding-box;
 }
+
+
 
 .unique-card-inner {
     width: 100%;
@@ -793,12 +797,22 @@ a{
         width: 100%;
     } */
     h3{
-        position: relative;
-        color: white;
-        z-index: 1;
-        font-family: astro;
-        animation: slideIn 2s ease-in-out;
-        top: 35vh;
+        font-size: 2em;
+    font-weight: bold;
+    font-family: astro;
+    text-decoration: none;
+    position: relative;
+    color: transparent;
+    background-image: linear-gradient(90deg, #1e90ff, #00bfff, #1e90ff);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(30, 144, 255, 0.8), 0 0 20px rgba(0, 191, 255, 0.5);
+    animation: gradientShift 4s linear infinite;
+    align-items: center;
+    justify-content: center;
+    top: 37vh;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
     }
     /* h1{
         padding-top: 100px;
@@ -1329,76 +1343,76 @@ h1 {
     text-decoration: none;
     position: relative;
     color: transparent;
-    background-image: repeating-linear-gradient(45deg, #f1f1f1 0px, #f1f1f1 144px, gray 144px, gray 288px, #bebebe 288px, #bebebe 432px);
-    background-size: 250%;
-    background-position: 0%;
-    -webkit-background-clip: text;
+    background-image: linear-gradient(90deg, #1e90ff, #00bfff, #1e90ff);
+    background-size: 300%;
     background-clip: text;
-    -webkit-animation: stripeAnimation 3s linear infinite;
-    animation: stripeAnimation 3s linear infinite;
-    animation-play-state: running;
-    -webkit-animation-play-state: paused;
-    animation-play-state: paused;
-    animation: slideIn 2s ease-in-out;
+    -webkit-background-clip: text;
+    text-shadow: 0 0 10px rgba(30, 144, 255, 0.8), 0 0 20px rgba(0, 191, 255, 0.5);
+    animation: gradientShift 4s linear infinite;
     align-items: center;
     justify-content: center;
     top: 25vh;
-  }
-  
-  h1:hover {
-    -webkit-animation-play-state: running;
-    animation-play-state: running;
-  }
-  
-  @keyframes stripeAnimation {
-    100% {
-      background-position: 165%;
-    }
-  }
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
 
-  @font-face{
-    font-family: astro;
-    src: url("astro.ttf");
-  }
+h1:hover {
+    transform: translateY(-5px); /* Subtle hover lift */
+    text-shadow: 0 0 15px rgba(30, 144, 255, 1), 0 0 30px rgba(0, 191, 255, 0.8); /* Slightly brighter glow */
+}
 
-  @keyframes slideIn {
+@keyframes gradientShift {
     0% {
-      transform: translateX(-100%); /* Start 'E' offscreen to the left */
+        background-position: 0%;
     }
-    50% {
-      transform: translateX(0); /* Bring 'E' into view */
+    100% {
+        background-position: 300%;
     }
-  }
+}
 
-  h4{
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0%;
+    }
+    100% {
+        background-position: 200%;
+    }
+}
+
+h4 {
     color: white;
     z-index: 1;
     position: absolute;
     top: 350px;
     left: 31%;
-    animation: newslide 2s ease-in;
     font-family: cap;
     margin-top: 95px;
-    gap: 2px;
-  }
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeInSlide 1.5s ease-in forwards;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
 
-  @keyframes newslide {
+@keyframes fadeInSlide {
     0% {
-      transform: translateX(100%); /* Start 'E' offscreen to the left */
+        opacity: 0;
+        transform: translateY(20px); /* Slide in from below */
     }
-    50% {
-      transform: translateX(0); /* Bring 'E' into view */
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Settle into place */
     }
-  }
+}
 
-  @font-face{
-    font-family: astrolab;
-    src: url("Astrolab.ttf");
-  }
-  @font-face{
+@font-face {
+    font-family: astro;
+    src: url("astro.ttf");
+}
+
+@font-face {
     font-family: cap;
     src: url("American Captain.otf");
-  }
+}
 
 
 .navv{
@@ -1407,17 +1421,41 @@ h1 {
     align-items: center;
     justify-content: space-evenly;
     color: white;
-    z-index: 1;
+    z-index: 2;
     margin-top: 40px;
     position: sticky;
+    background-color: #000000;
+    border-radius: 1rem;
+    height: auto;
    
 }
 
-.navv a{
+.navv a {
     z-index: 1;
     color: white;
     text-decoration: none;
     position: sticky;
+    position: relative; /* Required for ::after positioning */
+    transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.navv a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust to position the underline closer to the text */
+    left: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: skyblue; /* Color of the underline */
+    transition: width 0.3s ease; /* Smooth underline animation */
+}
+
+.navv a:hover {
+    color: skyblue;
+}
+
+.navv a:hover::after {
+    width: 100%; /* Extend the underline to full width on hover */
 }
 
 .iic{
