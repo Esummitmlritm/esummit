@@ -16,6 +16,20 @@
   }
 
 
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.hero{
+    position: relative;
+    top: 75vh;
+    height: 100vh;
+}
+
 .iicLogo{
     display: inline-block;
     position: absolute;
@@ -35,21 +49,6 @@
     top: 2px;
     object-fit: contain;
 }
-
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-}
-
-.hero{
-    position: relative;
-    top: 75vh;
-    height: 100vh;
-}
-
 
 .unique-card {
     width: 250px;
@@ -209,13 +208,22 @@ p {
     align-items: center;
     padding: 20px;
     width: 80%;
-    /* animation: fadeIn 1s ease-in forwards;
-      animation-delay: calc(var(--scroll) * -1s);
-      animation: scale-a-lil linear both;
-     */
     position: relative;
     top: 50vh;
+
+    /* Animation for floating effect */
+    animation: floating 3s ease-in-out infinite;
 }
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0); /* Initial and final position */
+    }
+    50% {
+        transform: translateY(-10px); /* Moves element slightly upwards */
+    }
+}
+
 
 /* Unique styling for the main container */
 .event-stats {
@@ -262,8 +270,6 @@ p {
     min-width: 120px;
 }
 
-
-
 .number {
     font-size: 2em;
     color: #b39ddb; /* Purple color */
@@ -276,44 +282,6 @@ p {
     text-transform: uppercase;
     margin-top: 5px;
 }
-
-/* Floating animation */
-@keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-8px);
-    }
-    100% {
-        transform: translateY(0);
-    }
-}
-
-/* Applying animation to .stat-card */
-.stat-card {
-    background-color: #222;
-    border-radius: 10px;
-    padding: 20px 30px;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    min-width: 120px;
-    animation: float 3s ease-in-out infinite; /* Adding floating effect */
-}
-
-/* Alternatively, apply to .event-stats if you want the entire container to float */
-.event-stats {
-    text-align: center;
-    padding: 40px;
-    border-radius: 15px;
-    background: linear-gradient(145deg, #1a1a1a, #333);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5), 0 0 15px rgba(128, 128, 255, 0.3);
-    overflow: hidden;
-    animation: float 3s ease-in-out infinite; /* Float animation */
-}
-
-
-
 * {
     margin: 0;
     padding: 0;
@@ -497,7 +465,7 @@ ul {
   }
 
   .container {
-    overflow: hidden;
+    overflow: hidd;
     padding: 20px;
     margin-top: 1.5em;
     background: rgba(0,0,0,.1);
@@ -506,8 +474,8 @@ ul {
   
   .card-carousel {
     --card-width: 80%;
-    --card-max-width: 300px;
-    --card-height: 370px;
+    --card-max-width: 280px;
+    --card-height: 350px;
     --carousel-min-width: 600px;
     z-index: 1;
     position: relative;
@@ -848,6 +816,7 @@ a{
         position: relative;
         top: 95vh;
     }
+
     .iicLogo{
         height: 70px;
         width: 70px;
@@ -859,17 +828,6 @@ a{
         width: 70px;
         top: 7.5vh;
         left: 10px;
-    }
-    .hyd{
-        height: 70px;
-        width: 70px;
-        height: 50px;
-        width: 30px;
-        top: 3vh;
-        left: 0px;
-    }
-    .social{
-        bottom: 0;
     }
 }
 
@@ -938,6 +896,8 @@ a{
     transform-origin: 13vw 14vh;
     box-shadow: 2vmin 0 0.8293567406288289vmin currentColor;
 }
+
+
 .background span:nth-child(1) {
     color: #dedede;
     top: 62%;
@@ -1474,9 +1434,6 @@ h1 {
     color: skyblue;
 }
 .speakers:hover{
-    color: skyblue;
-}
-.about:hover{
     color: skyblue;
 }
 
