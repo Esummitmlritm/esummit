@@ -35,7 +35,7 @@ const eventLinks = [
   "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
   "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
   "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
-  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view"
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view","https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view"
 ];
 
 const ulEl = document.querySelector("ul");
