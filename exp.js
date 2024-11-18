@@ -31,11 +31,11 @@ const eventImages = [
 ];
 
 const eventLinks = [
-  "https://docs.google.com/forms/d/e/1FAIpQLSdTRyfkcQv2uxBZIytQn6IKyKZvLyeWQpFUCG-4MeLngq2PWA/viewform", "https://link-hackathon.com", "https://link-internship.com",
-  "https://link-startup.com", "https://link-autoexpo.com", "https://link-keynote.com",
-  "https://link-panel.com", "https://link-hello.com", "https://link-esummit.com",
-  "https://link-iic.com", "https://link-meghanad.com", "https://link-akhil.com",
-  "https://link-mithresh.com", "https://link-rochan.com"
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view"
 ];
 
 const ulEl = document.querySelector("ul");
