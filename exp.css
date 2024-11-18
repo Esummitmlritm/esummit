@@ -228,7 +228,6 @@ p {
     }
 }
 
-
 /* Unique styling for the main container */
 .event-stats {
     text-align: center;
@@ -239,18 +238,6 @@ p {
     /* position: relative; */
     overflow: hidden;
 }
-
-/* Optional animation effect for uniqueness */
-
-
-/* @keyframes pulse {
-    0% {
-        transform: scale(1) rotate(45deg);
-    }
-    100% {
-        transform: scale(1.5) rotate(45deg);
-    }
-} */
 
 .event-stats h2 {
     font-size: 1.5em;
@@ -272,6 +259,7 @@ p {
     text-align: center;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     min-width: 120px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .number {
@@ -286,6 +274,14 @@ p {
     text-transform: uppercase;
     margin-top: 5px;
 }
+
+/* Add hover effect to stat-card */
+.stat-card:hover {
+    transform: translateY(-5px); /* Slight lift effect */
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.3); /* Enhanced shadow effect */
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -300,16 +296,21 @@ p {
 }
 
 .event-info {
-    background-color: #333;
-    padding: 1rem;
-    border-radius: 5px;
+    background-color: #444;
+    color: #fff; /* Text color for better contrast */
+    padding: 1.5rem; /* Slightly increase padding for better spacing */
+    border-radius: 10px; /* More rounded corners */
     display: none;
     margin-right: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth transition for changes */
 }
 
 .event-info.active {
     display: block;
+    background-color: #555; /* Slightly lighter background for active state */
 }
+
 
 ul {
     list-style: none;
@@ -1348,7 +1349,7 @@ h1 {
     background-clip: text;
     -webkit-background-clip: text;
     text-shadow: 0 0 10px rgba(30, 144, 255, 0.8), 0 0 20px rgba(0, 191, 255, 0.5);
-    animation: gradientShift 4s linear infinite;
+    animation: gradientShift 4s linear infinite, fadeInScale 2s ease-out;
     align-items: center;
     justify-content: center;
     top: 25vh;
@@ -1369,13 +1370,14 @@ h1:hover {
     }
 }
 
-
-@keyframes gradientShift {
+@keyframes fadeInScale {
     0% {
-        background-position: 0%;
+        opacity: 0;
+        transform: scale(0.8) ;
     }
     100% {
-        background-position: 200%;
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
     }
 }
 
@@ -1392,6 +1394,19 @@ h4 {
     animation: fadeInSlide 1.5s ease-in forwards;
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
+
+/* Add professional animation to h4 */
+@keyframes fadeInSlide {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Starts 20px below its final position */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Ends at its final position */
+    }
+}
+
 
 @keyframes fadeInSlide {
     0% {
