@@ -35,8 +35,8 @@
     position: absolute;
     left: 10%;
     top: 2px;
-    height: 150px;
-    width: 120px;
+    height: 170px;
+    width: 150px;
     object-fit: contain;
 }
 
@@ -44,8 +44,8 @@
     display: inline-block;
     position: absolute;
     right: 10%;
-    height: 150px;
-    width: 100px;
+    height: 170px;
+    width: 120px;
     top: 2px;
     object-fit: contain;
 }
@@ -308,7 +308,7 @@ p {
 
 .event-info.active {
     display: block;
-    background-color: #555; /* Slightly lighter background for active state */
+    background-color: #1a1a1a; /* Slightly lighter background for active state */
 }
 
 
