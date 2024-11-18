@@ -847,6 +847,12 @@ a{
     
 }
 
+@media screen and (max-width: 450px) {
+   h3{
+    margin-top: -5vh;
+   }
+}
+
 
 @keyframes fadeIn {
     from {
