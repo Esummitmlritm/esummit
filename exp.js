@@ -60,13 +60,24 @@ function init() {
     ulEl.append(liEl);
 
     // Add click event for both PC and Mobile views
-    liEl.addEventListener('click', () => {
-        adjustDay(idx - daynumber);
-            updateEventInfo(activeIndex);
-            updateEventInfo(idx);
-            eventModal.show();
-        
-    });
+liEl.addEventListener('click', () => {
+      // Detect if the device is mobile
+      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+  
+      // Perform your logic only for mobile
+      if (isMobile) {
+          adjustDay(idx - daynumber);
+          updateEventInfo(activeIndex);
+          updateEventInfo(idx);
+          eventModal.show(); // Only show modal on mobile
+      } else {
+          adjustDay(idx - daynumber);
+          updateEventInfo(activeIndex);
+          updateEventInfo(idx);
+
+          // Perform PC-specific actions if needed
+      }
+  });
 });
 
   ulEl.style.setProperty("--rotateDegrees", rotate);
