@@ -369,31 +369,42 @@ ul {
 }
 /* controls */
 .controls {
-	position: absolute;
-	top: 50%;
-	left: 100%;
-	transform: translateY(-50%);
-	display: flex;
-	flex-direction: column;
-	gap: 0.125rem;
+    position: absolute;
+    top: 50%;
+    left: 98%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem; /* Default position for mobile: right side */
 }
+
 .controls button {
-	width: 1.5rem;
-	aspect-ratio: 1;
-	font-size: 0.9rem;
-	color: white;
-	border: none;
-	background: black;
-	display: grid;
+    width: 1.5rem;
+    aspect-ratio: 1;
+    font-size: 0.9rem;
+    color: white;
+    border: none;
+    background: black;
+    display: grid;
     border-radius: 8px;
-	place-items: center;
+    place-items: center;
 }
+
 .controls button:hover,
 .controls button:focus {
-	background: rgb(30, 28, 31);
+    background: rgb(30, 28, 31);
 }
+
 .controls button:active {
-	transform: scale(0.9);
+    transform: scale(0.9);
+}
+
+/* For larger screens (PC) */
+@media (min-width: 768px) {
+    .controls {
+        left: 1rem; /* Move to the left side for PC */
+        right: auto; /* Reset the right position */
+    }
 }
 
 .event-img {
