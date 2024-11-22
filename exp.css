@@ -1645,3 +1645,7 @@ hr {
 }
 .pads{
      padding-right: 38%;
+}
+.main-button{
+    border-radius: 10px;
+}
