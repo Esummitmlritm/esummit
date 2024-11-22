@@ -1,10 +1,12 @@
+
 const febHolidays = [
-  "Keynote Session", "Startup Expo", "Internship Fair", "Mock Interviews",
+  "E-Summit","Keynote Session", "Startup Expo", "Internship Fair", "Mock Interviews",
   "Fire Chat", "Networking Lounge", "Workshop & Master Class", "Career Guidance Program", "Hackthon", "Board Room",
   "Ideathon", "Entrepreneurship Quiz", "Battle of Bands", "Virtual Trading League" , "Panel Discussion"
 ];
 
 const eventDetails = [
+  "the e-summit2k24",
   "Inspiration from Visionary Leaders Listen to inspiringstories and valuable insights from successfulentrepreneurs, industry experts, and thought leaders in ourKeynote Session",
   "Showcasing Innovation and Enterprise Explore the Startup Expo, where emerging entrepreneurs showcase their products, prototypes, and services.",
   "Connecting Talent with Opportunity The Internship Fairconnects students with leading companies offeringinternship opportunities across various fields",
@@ -23,19 +25,19 @@ const eventDetails = [
 ];
 
 const eventImages = [
-  "coming.png", "startupexpo.png", "coming.png", 
-  "coming.png", "coming.png", "coming.png", 
-  "workshop.png", "career.png", "hackathon.png", 
-  "board.png", "ideathon.jpg", "entro.png", 
-  "battle.png", "vitualTrade.jpg","coming.png"
+  "images/mainposter.jpg","images/keynote.png", "images/startupexpro.png", "images/intershipfair.jpg", 
+  "images/mockinterview.png", "images/firechat.png", "images/networklougue.png", 
+  "images/workshop.png", "images/career.png", "images/hackathon.png", 
+  "images/board.png", "images/ideathon.jpg", "images/entro.png", 
+  "images/battle.png", "images/vitualTrade.jpg","images/paneldiscussion.png"
 ];
 
 const eventLinks = [
-  "https://docs.google.com/forms/d/e/1FAIpQLSdTRyfkcQv2uxBZIytQn6IKyKZvLyeWQpFUCG-4MeLngq2PWA/viewform", "https://link-hackathon.com", "https://link-internship.com",
-  "https://link-startup.com", "https://link-autoexpo.com", "https://link-keynote.com",
-  "https://link-panel.com", "https://link-hello.com", "https://link-esummit.com",
-  "https://link-iic.com", "https://link-meghanad.com", "https://link-akhil.com",
-  "https://link-mithresh.com", "https://link-rochan.com"
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view",
+  "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view", "https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view","https://pages.razorpay.com/pl_PLYjKmhBfvFxRf/view"
 ];
 
 const ulEl = document.querySelector("ul");
@@ -540,4 +542,3 @@ function flipCard(card) {
   // Toggle the flipped state for the clicked card
   card.classList.toggle('flipped');
 }
-
