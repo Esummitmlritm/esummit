@@ -13,9 +13,12 @@
       animation-delay: calc(var(--scroll) * -1s);
       animation: scale-a-lil linear both;
       overflow-x: hidden;
-  }
+}
 
-
+.iicprev{
+    display: block;
+    top: 10vh;
+}
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -46,8 +49,8 @@
     right: 10%;
     height: 170px;
     width: 120px;
-    top: 2px;
     object-fit: contain;
+    top: 1px;
 }
 
 .unique-card {
@@ -547,21 +550,21 @@ ul {
   
   
   .card:nth-of-type(1) .image-container {
-      background-image: url("speaker1-1.png");
+      background-image: url("images/speaker1-1.png");
   }
    
   .card:nth-of-type(2) .image-container {
-    background-image: url("speaker2-2.png")
+    background-image: url("images/speaker2-2.png")
   }
   
   .card:nth-of-type(3) .image-container {
-    background-image: url("speaker3.jpg")
+    background-image: url("images/speaker3.jpg")
   }
   .card:nth-of-type(4) .image-container {
-    background-image: url("speaker1-1.png")
+    background-image: url("images/speaker1-1.png")
   }
   .card:nth-of-type(5) .image-container {
-    background-image: url("speaker3.jpg")
+    background-image: url("images/speaker3.jpg")
   }
   
   
@@ -619,8 +622,7 @@ a{
     width: 100%; /* Full width of viewport */
     margin-top: 10rem;
     animation: fadeIn 1s ease-in forwards;
-      animation-delay: calc(var(--scroll) * -1s);
-    
+    animation-delay: calc(var(--scroll) * -1s);
     position: relative;
     top: 80vh;
     overflow-x: hidden;
@@ -664,7 +666,6 @@ a{
         height: auto;
         width: 100%;
         border: 2px solid black;
-        margin-top: 10%;
         padding: 20px;
         box-sizing: border-box;
         font-family: 'Roboto', sans-serif;
@@ -795,7 +796,13 @@ a{
         display: flex;
         flex-direction: column; /* Stack content vertically on small screens */
     }
-
+    .iicRight{
+        display: inline-block;
+        position: absolute;
+        height: 170px;
+        width: 120px;
+        margin-left: 80%;
+    }
     .container-rochan {
         position: relative;/* Ensure no horizontal overflow */
         right: 10px;
@@ -849,13 +856,12 @@ a{
     .iicLogo{
         height: 70px;
         width: 70px;
-        top: 2.5vh;
         left: 10px;
+        top: 10px;
     }
     .iicRight{
         height: 70px;
         width: 70px;
-        top: 7.5vh;
         left: 10px;
     }
     
@@ -1369,7 +1375,15 @@ a{
     transform-origin: 4vw 16vh;
     box-shadow: -2vmin 0 0.37869171911220967vmin currentColor;
 }
-  
+.spantag{
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    font-family:monospace ;
+}
+.centered{
+    text-align: center;
+}
 h1 {
     font-size: 5em;
     font-weight: bold;
@@ -1461,6 +1475,31 @@ h4 {
     font-family: cap;
     src: url("American Captain.otf");
 }
+@media (max-width: 1024px) {
+    h4 {
+        top: 300px; 
+        left: 25%; 
+        font-size: 1.3rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    h4 {
+        top: 310px;
+        left: 20%; 
+        font-size: 1.1rem; 
+        margin-top: 50px; 
+    }
+}
+
+@media (max-width: 480px) {
+    h4 {
+        top: 305px;
+        left: 10%; 
+        font-size: 1rem; 
+        text-align: center; 
+    }
+}
 
 
 .navv {
@@ -1538,6 +1577,11 @@ h4 {
 .navv a:hover::after {
     width: 100%; /* Extend the underline to full width on hover */
 }
+@media (max-width: 768px) {
+    .navv {
+        display: none; /* Hides the navbar on screens smaller than 768px */
+    }
+}
 
 .iic{
     object-fit: contain;
@@ -1572,7 +1616,7 @@ h4 {
 }
 
 .foot{
-    background-image: url("beautiful-aurora-footer-lights.png");
+    background-image: url("images/beautiful-aurora-footer-lights.png");
     background-repeat: none;
 }
 .img-black{
@@ -1580,8 +1624,22 @@ h4 {
 }
 .bottom-center{
     color: lightseagreen;
-    margin-left: 340px;
+    margin-left: 45%;
 }
 .bottom-center p i{
 color: red;
+}
+@media (max-width:768px) {
+    .bottom-center{
+        color: lightseagreen;
+        margin-left: 28%;
+    }
+    .bottom-center p i{
+    color: red;
+    }
+}
+hr {
+    border: 1px solid white; /* Use this to set the visible line color */
+    width: 100%; /* Maintain full width */
+    margin: 10px 0; /* Add some spacing for better visibility */
 }
