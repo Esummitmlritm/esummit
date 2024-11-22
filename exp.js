@@ -25,11 +25,11 @@ const eventDetails = [
 ];
 
 const eventImages = [
-  "images/mainposter.jpg","images/keynote.png", "images/startupexpro.png", "images/intershipfair.jpg", 
-  "images/mockinterview.png", "images/firechat.png", "images/networklougue.png", 
-  "images/workshop.png", "images/career.png", "images/hackathon.png", 
-  "images/board.png", "images/ideathon.jpg", "images/entro.png", 
-  "images/battle.png", "images/vitualTrade.jpg","images/paneldiscussion.png"
+  "mainposter.jpg","keynote.png", "startupexpro.png", "intershipfair.jpg", 
+  "mockinterview.png", "firechat.png", "networklougue.png", 
+  "workshop.png", "career.png", "hackathon.png", 
+  "board.png", "ideathon.jpg", "entro.png", 
+  "battle.png", "vitualTrade.jpg","paneldiscussion.png"
 ];
 
 const eventLinks = [
